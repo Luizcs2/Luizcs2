@@ -1,0 +1,273 @@
+button{
+	border-radius: 20px;
+	border-color: black;
+	width: 30px;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+  cursor:pointer;
+  
+}
+.buttonmargin1
+{
+  color:red;
+  background:red;
+  border:red;
+}
+.buttonmargin1:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonmargin2
+{
+  color:orange;
+  background:orange;
+  border:red;
+}
+.buttonmargin2:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonmargin3
+{
+  color:yellow;
+  background:yellow;
+  border:red;
+}
+.buttonmargin3:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonmargin4
+{
+  color:#66a3ff;
+  background:#66a3ff;
+  border:red;
+}
+.buttonmargin4:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonmargin5
+{
+  color:#ac7339;
+  background:#ac7339;
+  border:red;
+}
+.buttonmargin5:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonmargin6
+{
+  color:#00e600;
+  background:#00e600;
+  border:red;
+}
+.buttonmargin6:hover
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero1 
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero2
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero3
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero4
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero5 
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+.buttonzero6
+{
+  color:white;
+  background:grey;
+  border:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container1{
+      
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:100px;
+
+}
+
+#container2{
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:60px;
+
+}
+#container3{
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:50px;
+
+}
+#container4{
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:10px;
+
+}
+#container5{
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:-20px;
+
+}
+
+#container6{
+  
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative; left:0px; top:-50px;
+
+}
+
+body {
+background-color:#ffffff;
+}
+.pyramid-container {
+text-align: center;
+}
+.inside-text {
+position: absolute;
+bottom: 80px;
+}
+#pyramid-level-1{
+border-bottom: 90px solid red;
+border-left: 85px solid transparent;
+border-right: 85px solid transparent;
+height:10px;
+width: 5px;
+margin-right:auto;
+margin-left:auto;
+position:relative; left:0px; top:150px;
+}
+
+#pyramid-level-2 {
+border-bottom: 80px solid orange;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 15px;
+width: 180px;
+margin-right:auto;
+margin-left:auto;
+position:relative; left:0px; top:120px;
+}
+
+#pyramid-level-3{
+position: relative;
+border-bottom: 80px solid yellow;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 5px;
+width: 360px;
+margin-right:auto;
+margin-left:auto;
+position:relative; left:0px; top:100px;
+}
+
+#pyramid-level-4 {
+position: relative;
+border-bottom: 80px solid #66a3ff;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 10px;
+width: 520px;
+margin-right:auto;
+margin-left:auto;
+position:relative; left:0px; top:60px;
+}
+
+#pyramid-level-5 {
+position: relative;
+border-bottom: 80px solid #ac7339;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height: 0px;;
+width: 680px;
+margin-right:auto;
+margin-left:auto;
+position:relative; left:0px; top:30px;
+}
+
+#pyramid-level-6 {
+position: relative;
+border-bottom: 80px solid #00e600;
+border-left: 80px solid transparent;
+border-right: 80px solid transparent;
+height:0px;
+width: 840px;
+margin-left: 25px;
+}
+
+
+
+
+label {
+display: block;
+font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+margin: 0.4rem 0;
+}
+
