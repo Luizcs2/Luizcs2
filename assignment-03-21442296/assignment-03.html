@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignment-03.css">
+</head>
+<body>
+    <table id="Table" class="Table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Student ID</th>
+            <th>Assignment 1</th>
+            <th>Assignment 2</th>
+            <th>Assignment 3</th>
+            <th>Assignment 4</th>
+            <th>Assignment 5</th>
+            <th id="finalGrade" class="finalGrade ">Average [%]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left">David</td>
+            <td class="left">1</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Elizabeth</td>
+            <td class="left">2</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Emily</td>
+            <td class="left">3</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">James</td>
+            <td class="left">4</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Jennifer</td>
+            <td class="left">5</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">John</td>
+            <td class="left">6</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Mary</td>
+            <td class="left">7</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Michael</td>
+            <td class="left">8</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">Sarah</td>
+            <td class="left">9</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+          <tr>
+            <td class="left">William</td>
+            <td class="left">10</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="center" contenteditable="true" onblur="average()">-</td>
+            <td class="td-result">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="UnSubmittedAssignments">
+        <label id="emptyCells">Un-submitted	assignments: 50</label>
+      </div>
+      
+      <div class="wrapper" >
+        <button onclick="addRow()"  class="myButton">
+          New Row
+        </button>
+        <button onclick="addCol()"  class="myButton">
+          New Column
+        </button>
+        <button onclick="retrieveTable()"  class="myButton">
+          Retrive
+        </button>
+      </div>
+
+    <script src="assignment-03.js"></script>
+</body>
+</html>
