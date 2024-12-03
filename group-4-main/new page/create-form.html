@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Form for Questionnaire</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #898989;
+        background-image: url("maynooth pic.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(20px, 2.5vw, 36px);
+        color: #898989;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .form-title {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .form-title label {
+        font-size: 1.2rem;
+        color: #a0a0a0;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .form-title input {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #898989;
+        border-radius: 5px;
+        width: 300px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .form-editor {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(137, 137, 137, 0.402);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      .question label {
+        font-size: 1.1rem;
+        color: #727171;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .question input,
+      .question textarea {
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        border: 1px solid #727171;
+        border-radius: 5px;
+        width: calc(100% - 22px);
+        box-sizing: border-box;
+      }
+
+      .add-question-btn,
+      .save-btn,
+      .delete-question-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .add-question-btn:hover,
+      .save-btn:hover,
+      .delete-question-btn:hover {
+        background-color: #e55b00;
+      }
+
+      .btn-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Create Form</h1>
+
+    <div class="form-title">
+      <label for="formTitle">Form Title:</label>
+      <input type="text" id="formTitle" placeholder="Enter form title" />
+    </div>
+
+    <div class="form-editor" id="formEditor">
+      <!-- Questions will be dynamically added here -->
+    </div>
+
+    <div class="btn-container">
+      <button type="button" class="add-question-btn" onclick="addQuestion()">
+        Add Question
+      </button>
+      <button type="button" class="save-btn" onclick="saveForm()">
+        Save Form
+      </button>
+    </div>
+
+    <script>
+      function addQuestion() {
+        const formEditor = document.getElementById("formEditor");
+        const existingQuestions = formEditor.querySelectorAll(
+          ".question input[name='question']"
+        );
+
+        const lastQuestion = existingQuestions[existingQuestions.length - 1];
+        if (lastQuestion && lastQuestion.value.trim() === "") {
+          lastQuestion.focus();
+          return;
+        }
+
+        const questionNumber = formEditor.children.length + 1;
+        const questionDiv = document.createElement("div");
+        questionDiv.classList.add("question");
+
+        const questionLabel = document.createElement("label");
+        questionLabel.textContent = `Question ${questionNumber}`;
+        questionLabel.setAttribute("for", `question${questionNumber}`);
+        questionDiv.appendChild(questionLabel);
+
+        const questionInput = document.createElement("input");
+        questionInput.type = "text";
+        questionInput.name = "question";
+        questionInput.placeholder = "Enter your question";
+        questionInput.id = `question${questionNumber}`;
+        questionDiv.appendChild(questionInput);
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add("delete-question-btn");
+        deleteButton.onclick = function () {
+          questionDiv.remove();
+          updateQuestionLabels();
+        };
+        questionDiv.appendChild(deleteButton);
+
+        formEditor.appendChild(questionDiv);
+        updateQuestionLabels();
+        questionInput.focus();
+      }
+
+      function updateQuestionLabels() {
+        const questions = document.querySelectorAll(".question");
+        questions.forEach((question, index) => {
+          const label = question.querySelector("label");
+          label.textContent = `Question ${index + 1}`;
+          const input = question.querySelector("input");
+          input.id = `question${index + 1}`;
+        });
+      }
+
+      function saveForm() {
+        const formTitle = document.getElementById("formTitle").value;
+        const formEditor = document.getElementById("formEditor");
+        const questions = formEditor.querySelectorAll(".question");
+
+        const formData = {
+          title: formTitle,
+          questions: [],
+        };
+
+        questions.forEach((questionElement, idx) => {
+          const question = questionElement.querySelector(
+            'input[name="question"]'
+          ).value;
+
+          if (question.trim() !== "") {
+            formData.questions.push({
+              id: idx + 1,
+              question: question,
+              answer: "",
+            });
+          }
+        });
+
+        let questionnaires =
+          JSON.parse(localStorage.getItem("questionnaires")) || [];
+        questionnaires.push(formData);
+        localStorage.setItem("questionnaires", JSON.stringify(questionnaires));
+
+        alert("Form saved successfully!");
+        console.log("Form Data:", formData);
+        console.log("All Questionnaires:", questionnaires);
+
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
