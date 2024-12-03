@@ -1,0 +1,123 @@
+.dashboard-container {
+  background-color: aliceblue;
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  .menuButton {
+    margin-right: 16px;
+    /* theme.spacing(2) */
+  }
+
+  .title {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    .title {
+      display: block;
+    }
+  }
+
+  .search {
+    position: relative;
+    border-radius: 4px;
+    /* theme.shape.borderRadius */
+    background-color: rgba(255, 255, 255, 0.15);
+
+    /* fade(theme.palette.common.white, 0.15) */
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      /* fade(theme.palette.common.white, 0.25) */
+    }
+
+    margin-right: 16px;
+    /* theme.spacing(2) */
+    margin-left: 16px;
+    /* theme.spacing(2) */
+    width: 100%;
+  }
+
+  @media (min-width: 600px) {
+    .search {
+      margin-left: 24px;
+      /* theme.spacing(3) */
+      width: auto;
+    }
+  }
+
+  .searchIcon {
+    padding: 0 16px;
+    /* theme.spacing(0, 2) */
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputRoot {
+    color: inherit;
+  }
+
+  .inputInput {
+    padding: 8px 8px 8px 0;
+    /* theme.spacing(1, 1, 1, 0) */
+    padding-left: calc(1em + 32px);
+    /* calc(1em + theme.spacing(4)) */
+    transition: width 300ms;
+    /* theme.transitions.create('width') */
+    width: 100%;
+  }
+
+  @media (min-width: 960px) {
+    .inputInput {
+      width: 20ch;
+    }
+  }
+
+  .sectionDesktop {
+    display: none;
+  }
+
+  @media (min-width: 960px) {
+    .sectionDesktop {
+      display: flex;
+    }
+  }
+
+  .sectionMobile {
+    display: flex;
+  }
+
+  @media (min-width: 960px) {
+    .sectionMobile {
+      display: none;
+    }
+  }
+}
+
+.form-container {
+  height: calc(100vh - 20px);
+  padding: 0;
+  margin: 0;
+
+  .root {
+    max-width: 345px;
+  }
+
+  .media {
+    height: 150px;
+    width: auto;
+  }
+
+  .cardGrid {
+    padding-top: 64px;
+    /* 8 * 8 (theme.spacing(8)) */
+    padding-bottom: 64px;
+    /* 8 * 8 (theme.spacing(8)) */
+    margin-top: 50px;
+  }
+}

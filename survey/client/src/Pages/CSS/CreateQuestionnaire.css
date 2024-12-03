@@ -1,0 +1,35 @@
+.create-questionnaire-container {
+  height: 100%;
+
+  .root {
+    flex-grow: 1;
+  }
+
+  .menuButton {
+    margin-right: 16px;
+    /* assuming theme.spacing(2) = 16px */
+  }
+
+  .toolbar {
+    min-height: 128px;
+    align-items: flex-start;
+    padding-top: 8px;
+    /* assuming theme.spacing(1) = 8px */
+  }
+
+  .title {
+    flex-grow: 1;
+    align-self: flex-end;
+    justify-self: center;
+  }
+
+  .paper {
+    padding: 16px;
+    /* assuming theme.spacing(2) = 16px */
+    color: rgba(0, 0, 0, 0.54);
+    /* default text.secondary color */
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+  }
+}
