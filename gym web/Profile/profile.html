@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Profile/profile.css">
+    <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+    <title>Motiv8 - User Profile</title>
+</head>
+<header>
+    <button type="button" onclick="goBack()" id="backbtn">⬅ Back</button>
+    <h1>Motiv8 - User Profile</h1> 
+</header>
+<body>
+  <div id="loader">
+    <div class="loader-circle"></div>
+  </div>
+    <div class="ppcon" id="maincon">
+        <img src="https://randomuser.me/api/portraits/lego/5.jpg" alt="Profile Picture" srcset="">
+        <!-- <img src="https://randomuser.me/api/portraits/lego/5.jpg" alt="Profile Picture" srcset="">
+        <img src="https://randomuser.me/api/portraits/lego/5.jpg" alt="Profile Picture" srcset=""> -->
+        <form id="userForm">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName">
+            </div>
+        
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName">
+            </div>
+        
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+            </div>
+        
+            <div class="form-group">
+              <label for="dob">Date of Birth:</label>
+              <input type="date" id="dob" name="dob">
+            </div>
+        
+            <div class="form-group">
+              <label for="weight">Weight (in kg):</label>
+              <input type="number" id="weight" name="weight" step="any">
+            </div>
+        
+            <div class="form-group">
+              <label for="height">Height (in cm):</label>
+              <input type="number" id="height" name="height" step="any">
+            </div>
+        
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" readonly>
+            </div>
+        
+            
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password">
+          </div>
+
+          <center>
+              <button type="button" id="updateBtn" onclick="submitForm()">Update Profile</button>
+          </center>
+          <div class="password-container">
+            <input type="checkbox" id="showPassword"> Show Password
+          </div>
+          </form>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.querySelector('.main-content').style.marginLeft = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.querySelector('.main-content').style.marginLeft = "0";
+        }
+        
+        // Simulate loading completion and hide loader after 3 seconds
+        setTimeout(function() {
+            document.getElementById('loader').style.opacity = '0';
+            document.getElementById('loader').style.pointerEvents = 'none';
+        }, 950); // Change this time as needed
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script src="/Profile/profile.js"></script>
+</body>
+</html>

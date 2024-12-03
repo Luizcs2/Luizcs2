@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+    <title>Motiv8 - Login</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1c1c1c, #000000);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            /* background-image: url('https://i.gifer.com/Gyn9.gif');
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+
+        header {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+
+        input[type="submit"], button {
+            background-color: #ff6600;
+            color: #1c1c1c;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e55e00;
+        }
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1c1c1c; /* Semi-transparent white */
+            z-index: 9999; /* Ensure it's above other elements */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.3s ease; /* Fade-in transition */
+        }
+      
+          /* Loader animation */
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+      
+          .loader-circle {
+            /* border: 10px solid rgba(17, 255, 0, 0.3); */
+            border: 10px solid #fff; /* Light border color */
+            border-top: 10px solid #ff6600; /* Black border color */
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 1s linear infinite; /* Spin animation */
+          }
+
+         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            color: rgb(87, 90, 255);
+            text-decoration: none;
+          }
+
+         a:hover{
+            text-decoration: underline;
+         }
+        </style>
+    
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-circle"></div>
+      </div>
+
+      <header id="motive8-header">
+        <h1>Motiv8</h1>
+    </header>
+
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <center>
+            <button type="button" id="loginBtn">Login</button>
+        </center>
+
+        <a href="/Front-End/create.html">First time? Create an Account now</a>
+        
+    </form>
+    <script src="/Login/loginScript.js"></script>
+    <script>
+        // Simulate loading completion and hide loader after 3 seconds
+        setTimeout(function() {
+          document.getElementById('loader').style.opacity = '0';
+          document.getElementById('loader').style.pointerEvents = 'none';
+        }, 950); // Change this time as needed
+
+</script>
+</body>
+</html>

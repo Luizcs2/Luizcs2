@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/Workouts/workouts.css">
+  <title>Motiv8 Workouts</title>
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-circle"></div>
+  </div>
+  <!-- Back button -->
+  <button class="back-button" onclick="goBack()">Back</button>
+
+  <h1><center>Motiv8 Exercises</center></h1>
+  <div class="video-container">
+    <!-- YouTube video embedded using iframe -->
+    <iframe width="940" height="529" src="https://www.youtube.com/embed/AOpi-p0cJkc" title="Beginner&#39;s Guide: Lat Pulldown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+    <!-- Workouts with bullet points -->
+
+    <div class="workouts">
+      <h2 id="exerciseName" style="text-align: center;"></h2>
+      <ul id="exerciseInstructions">
+        <!-- Instructions will be dynamically added here -->
+      </ul>
+    </div>
+  <script>
+    // JavaScript function to navigate back
+    function goBack() {
+      window.history.back();
+    }
+
+    // Simulate loading completion and hide loader after 3 seconds
+    setTimeout(function() {
+      document.getElementById('loader').style.opacity = '0';
+      document.getElementById('loader').style.pointerEvents = 'none';
+    }, 950); // Change this time as needed
+
+    async function getExercise() {
+    const uri = 'https://api.api-ninjas.com/v1/exercises?muscle=lats';
+    try {
+      const response = await fetch(uri, {
+        method: 'GET',
+        headers: {
+          'X-Api-Key': 'ppU8jcDDz2uyBkhkudFYaPfd2FYmLzdNx53XFfaw',
+        },
+      });
+      const data = await response.json();
+      const index = Math.floor(Math.random() * 10);
+      // Update exercise name
+      document.getElementById('exerciseName').textContent = data[index].name;
+
+      // Update exercise instructions
+      const instructionsList = document.getElementById('exerciseInstructions');
+      instructionsList.innerHTML = ''; // Clear existing instructions
+      data[index].instructions.split('. ').forEach(instruction => {
+        const listItem = document.createElement('li');
+        listItem.textContent = instruction;
+        instructionsList.appendChild(listItem);
+      });
+    } catch (error) {
+      console.log(`Error getting exercises: ${error}`);
+    }
+  }
+
+  // Call the function to fetch and update exercise data
+  getExercise();
+  </script>
+</body>
+</html>

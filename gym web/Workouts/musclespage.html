@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motiv8 Workouts</title>
+    <link href="/Workouts/musclespage.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+</head>
+
+<header id="banner">
+    <button id="backbtn" onclick="goBack()">⬅Back</button>
+    <h1>Motiv8 Workouts</h1>
+</header>
+<body>
+
+    <div id="loader">
+        <div class="loader-circle"></div>
+    </div>
+    
+    <div id="start"><center><h1>Select muscle group to begin Workouts</h1></center>
+        <!-- <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bNY0YTPj-cI?si=Mkchh8_pGN6J9T5u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center> --></div>
+
+    <div class="muscle-map">
+        <object type="image/svg+xml" data="/Images/musclepic.svg" id="musclemap"></object>
+    </div>
+
+<script>
+    // Simulate loading completion and hide loader after 3 seconds
+    setTimeout(function() {
+        document.getElementById('loader').style.opacity = '0';
+        document.getElementById('loader').style.pointerEvents = 'none';
+    }, 800); // Change this time as needed
+
+    // Load the SVG file into the object element
+    window.onload = function() {
+        var objectElement = document.getElementById('musclemap');
+        objectElement.setAttribute('data', '/Images/musclepic.svg');
+    };
+
+    function goBack() {
+        window.history.back();
+    }
+   
+</script>
+<script src="/Workouts/muscles.js"></script>
+
+</body>
+</html>

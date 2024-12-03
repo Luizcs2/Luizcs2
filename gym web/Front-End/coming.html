@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Meal Plan</title>
+  <link rel="stylesheet" href="/Front-End/menu.css">
+  <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+  <style>
+    #backbtn{
+        display: flex;
+        font-size: larger;
+    }
+    button {
+        background-color: #ff6600;
+        color: #1c1c1c;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+    button:hover{
+        background-color: #e55e00;
+    }
+  </style>
+</head>
+<header>
+		<button id="backbtn" onclick="goBack()">⬅Back</button>
+		<h1>Motiv8 -  </h1>
+	</header>
+
+<body>
+    <div id="main">
+        <center>
+            <h1>Coming Soon!</h1>
+        </center>
+    </div>
+  
+    <script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</body>
+</html>

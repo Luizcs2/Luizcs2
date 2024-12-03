@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Meal Plan</title>
+  <link rel="stylesheet" href="/Meals/mealstyles.css">
+  <link rel="shortcut icon" href="/Images/Motiv8favicon.ico" type="image/x-icon">
+</head>
+<header>
+		<button id="backbtn" onclick="goBack()">⬅Back</button>
+		<h1>Motiv8 - Meal plan </h1>
+	</header>
+
+<body>
+  <h1>Weekly Meal Plan</h1>
+  <div id="mealPlanDisplay">
+    <!-- Meal plan data will be displayed here -->
+  </div>
+
+  <script>
+    fetch('/get-meal-plan')
+      .then(response => response.json())
+      .then(data => {
+        const mealPlanDisplay = document.getElementById('mealPlanDisplay');
+        let html = '';
+
+        data.formattedMealPlan.forEach(day => {
+          html += `<h2>${day.dayOfWeek}</h2><ul>`;
+
+          day.recipes.forEach(recipe => {
+            html += `<li>
+              <h3>${recipe.recipeName}</h3>
+              <img src="${recipe.image}" alt="${recipe.recipeName}">
+              <ul>
+                <li><em>Ingredients:</em> ${recipe.ingredients.join(', ')}</li>
+                <li><em>Instructions:</em> ${recipe.instructions}</li>
+                <li><em>Ready in Minutes:</em> ${recipe.readyInMinutes}</li>
+                <li><em>Servings:</em> ${recipe.servings}</li>
+                <li><em>Source URL:</em> <a href="${recipe.sourceUrl}" target="_blank">${recipe.sourceUrl}</a></li>
+              </ul>
+            </li>`;
+          });
+
+          html += `</ul>`;
+        });
+
+        mealPlanDisplay.innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error fetching meal plan:', error);
+      });
+  </script>
+  <script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+
+</body>
+</html>
