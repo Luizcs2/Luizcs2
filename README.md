@@ -20,6 +20,6 @@ Build something useful (or at least fun)
 Always up to learn and collaborate—let’s connect
 
 <p align="center">
-  <img src="https://media.tenor.com/images/160c906f73e29a8d2fcdb53ac91b8a85/tenor.gif" width="200" alt="Dog coding GIF">
+  <img src="https://media.tenor.com/images/160c906f73e29a8d2fcdb53ac91b8a85/tenor.gif" alt="Dog coding GIF">
 </p>
 
