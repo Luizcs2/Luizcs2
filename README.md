@@ -6,6 +6,9 @@
 🚀 Just getting started with coding—currently diving into React and Java.
 
 💡 Learning as I go (mostly by Googling my own mistakes).
+<p align="center">
+  <img src="https://media.tenor.com/images/160c906f73e29a8d2fcdb53ac91b8a85/tenor.gif" alt="Dog coding GIF">
+</p>
 
 🛠️ Right now, I’m working on:
 
@@ -19,7 +22,5 @@ Build something useful (or at least fun)
 
 Always up to learn and collaborate—let’s connect
 
-<p align="center">
-  <img src="https://media.tenor.com/images/160c906f73e29a8d2fcdb53ac91b8a85/tenor.gif" alt="Dog coding GIF">
-</p>
+
 
