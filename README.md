@@ -1,12 +1,12 @@
 👋 Hey, I’m Luiz!
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhxbnFwMXIwaWg0dGFiMzNxbnl6Njg1NWJoNXhncWlxMDZkNmNmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" alt="Funny Coding GIF">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhxbnFwMXIwaWg0dGFiMzNxbnl6Njg1NWJoNXhncWlxMDZkNmNmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" witdh="400" alt="Funny Coding GIF">
 </p>
 
 🚀 Just getting started with coding—currently diving into React and Java.
 
 💡 Learning as I go (mostly by Googling my own mistakes).
-<p align="center">
+<p align="left">
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXJkZTlyN2hrbnkza3B4cmF0bmF6dGs2emN0NXd1YWVucHNmNjB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRx5tBBrTQOBi/giphy.gif" width="200" alt="Dog coding GIF">
 </p>
 
