@@ -7,7 +7,7 @@
 
 💡 Learning as I go (mostly by Googling my own mistakes).
 <p align="center">
-  <img src="[https://media.tenor.com/images/160c906f73e29a8d2fcdb53ac91b8a85/tenor.gi](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXJkZTlyN2hrbnkza3B4cmF0bmF6dGs2emN0NXd1YWVucHNmNjB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRx5tBBrTQOBi/giphy.gif)" alt="Dog coding GIF">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXJkZTlyN2hrbnkza3B4cmF0bmF6dGs2emN0NXd1YWVucHNmNjB4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRx5tBBrTQOBi/giphy.gif" width="200" alt="Dog coding GIF">
 </p>
 
 🛠️ Right now, I’m working on:
