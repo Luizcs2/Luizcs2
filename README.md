@@ -4,10 +4,6 @@
 
 💡 **Learning as I go** (mostly by Googling my own mistakes).
 
-<p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhxbnFwMXIwaWg0dGFiMzNxbnl6Njg1NWJoNXhncWlxMDZkNmNmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" width="200" alt="Funny Coding GIF">
-</p>
-
 🛠️ **Right now, I’m working on:**
 - Not losing my patience while debugging 🐛
 - Some fun beginner projects (open to suggestions!)
@@ -23,3 +19,7 @@
 ☕ **Fun fact:** I swear my code runs better after coffee.
 
 **Always up to learn and collaborate—let’s connect!**
+
+<p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXhxbnFwMXIwaWg0dGFiMzNxbnl6Njg1NWJoNXhncWlxMDZkNmNmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" width="200" alt="Funny Coding GIF">
+</p>
